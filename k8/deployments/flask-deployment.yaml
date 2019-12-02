@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask
+spec:
+  selector:
+    matchLabels:
+      run: flask
+  template:
+    metadata:
+      labels:
+        run: flask
+    spec:
+      containers:
+      - name: flasky
+        image: cheechundocker/new_flask
+        env:
+        - name: RMQ_USERNAME
+          value: "web-user1"
+        - name: RMQ_PASSWORD
+          value: "webpassword"  
+        ports:
+        - containerPort: 80
