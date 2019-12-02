@@ -13,11 +13,12 @@ spec:
     spec:
       containers:
       - name: flasky
-        image: cheechundocker/new_flask
+        image: cheechundocker/new_flask:latest
+        imagePullPolicy: Always
         env:
         - name: RMQ_USERNAME
           value: "web-user1"
-        - name: RMQ_PASSWORD
+        - name: RMQ_PASSWD
           value: "webpassword"  
         ports:
         - containerPort: 80

@@ -11,17 +11,24 @@ in Kubernetes as a deployment. This details can be found in k8 folders. Here is 
 ## Folders layout
 
 ```bash
-.                                                                                                                                                                                                                                                                                                                                                                          ├── flask_docker                                                                                                                                                                                                                                                                                                                                                           │   ├── app                                                                                                                                                                                                                                                                                                                                                                │   │   └── main.py                                                                                                                                                                                                                                                                                                                                                        │   ├── data.json                                                                                                                                                                                                                                                                                                                                                          │   ├── docker-compose.yml                                                                                                                                                                                                                                                                                                                                                 │   ├── Dockerfile                                                                                                                                                                                                                                                                                                                                                         │   └── requirements.txt
-
-├── k8                                                                                                                                                                                                                                                                                                                                                                     │   ├── deployments                                                                                                                                                                                                                                                                                                                                                        │   │   ├── flask-deployment.yaml
-
-│   │   └── rmq-deployment.yaml
-
-│   └── services                                                                                                                                                                                                                                                                                                                                                           │       ├── flask-service.yaml
-
-│       └── rmq-service.yaml
-
-└── README.md
-
+.
+├ flask_docker
+│   ├ app
+│   │   └ main.py
+│   ├ data.json
+│   ├ Dockerfile
+│   └ requirements.txt
+├ k8
+│   ├ deployments
+│   │   ├ flask-deployment.yaml
+│   │   └ rmq-deployment.yaml
+│   └ services
+│       ├ flask-service.yaml
+│       └ rmq-service.yaml
+├ rabbitmq_docker
+│   ├ Dockerfile
+│   └ rabbitmq
+│       ├ definitions.json
+│       └ rabbitmq.conf
+└ README.md
 ```
-

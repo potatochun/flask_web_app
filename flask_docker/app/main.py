@@ -101,5 +101,6 @@ def forjson():
 
 
 if __name__ == '__main__':
-	print(os.environ.get('RMQ_USERNAME'))
-	app.run(host="localhost", port=5000, debug="True")
+	app.run(host='0.0.0.0', debug="True", port=80)
+        #print(os.environ.get('RMQ_USERNAME'))
+	#app.run(host="localhost", port=5000, debug="True")
