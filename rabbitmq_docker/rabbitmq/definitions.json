@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "name": "web-user1",
+      "password_hash": "V9cBO+OuD5K+ZbT2VWqoZE0IZ4TpD+OjUeWuMPgHHe/FdNDk",
+      "tags": "administrator"
+    }
+  ],  
+  "vhosts": [{
+    "name": "web-vhost"
+  }],
+  "permissions": [{
+    "user": "web-user1",
+    "vhost": "web-vhost",
+    "configure": ".*",
+    "write": ".*",
+    "read": ".*"
+  }],
+  "exchanges": [{
+    "name": "webservice2-exchange",
+    "vhost": "web-vhost",
+    "type": "direct",
+    "durable": true,
+    "auto_delete": false,
+    "arguments": {}
+  }],  
+  "queues": [{
+    "name": "web2-queue",
+    "vhost": "web-vhost",
+    "durable": true,
+    "auto_delete": false,
+    "arguments": {}
+  }],
+  "bindings": [{
+    "source": "webservice2-exchange",
+    "vhost": "web-vhost",
+    "destination": "web2-queue",
+    "destination_type": "queue",
+    "routing_key": "valid",
+    "arguments": {}
+  }]
+}

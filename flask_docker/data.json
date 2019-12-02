@@ -1,0 +1,9 @@
+{
+    "ts": "1239999",
+    "sender": "testy&&test^#service",
+    "message": {
+        "foo": "bar",
+        "temp": "sdf"
+    },
+    "priority": 2
+}
