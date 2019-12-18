@@ -1,6 +1,0 @@
-Flask
-ipaddress    
-itsdangerous 
-Jinja2       
-jsonschema  
-pika        

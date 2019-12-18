@@ -1,6 +1,8 @@
-FROM tiangolo/uwsgi-nginx-flask:python2.7
+FROM tiangolo/uwsgi-nginx-flask:python3.6
 
 COPY ./app /app
-COPY ./requirements.txt /app
 
-RUN pip install -r /app/requirements.txt
+COPY ./Pip* /app/
+
+RUN pip install --upgrade pip && pip install pipenv && pipenv install --dev --system --ignore-pipfile --deploy
+
